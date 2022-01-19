@@ -65,6 +65,10 @@ There will be a series of sessions, each of which will be about a group of topic
   - Higher Order Functions
   - Callback Function
 
+### Refernce
+
+- https://262.ecma-international.org/6.0/#sec-strict-equality-comparison
+
 # Day 2
 
     Will decide based on the interaction.
