@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM and Async JS</title>
+
+    <style>
+      div {
+        background-color: royalblue;
+        border: black solid 2px;
+        width: auto;
+        padding: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="grand-parent">
+      <div id="parent">
+        <div id="child-1">Javascript</div>
+        <div id="child-2">Typescript</div>
+      </div>
+    </div>
+
+    <script>
+      // 1. DOM => tree => containes node
+      // 1.1 NodeList (static)
+      // 1.2 HTML Collection ( live)
+
+      //   DOM Query
+
+      let parent = document.getElementById("parent");
+      let grandParent = document.getElementById("grand-parent");
+      //   console.log(parent);
+      //   let children = parent.children;
+
+      //   console.log(children);
+
+      //   let parentNode = parent.parentNode;
+      //   console.log(parentNode);
+
+      //   console.log(parent.attributes);
+
+      //   parent.remove();
+
+      //   parent.addEventListener("click", (event) => {
+      //     let child = event.target;
+      //     child.style.backgroundColor = "red";
+
+      //     console.log("Bubling up", "Parent is cliked");
+      //   });
+
+      //   parent.addEventListener(
+      //     "click",
+      //     (event) => {
+      //       console.log("Capturing down", "Parent is cliked");
+      //     },
+      //     true
+      //   );
+
+      //   grandParent.addEventListener("click", (event) => {
+      //     console.log(event.target);
+      //     console.log("Bubling up", "Grand Parent is cliked");
+      //   });
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+    const titles = document.querySelectorAll('h1')
+titles[3].setAttribute('class', 'title')
+titles[3].setAttribute('id', 'fourth-title')
+
+
+ -->

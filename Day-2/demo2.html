@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ajax</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+  </head>
+  <body>
+    <!-- DOM  -->
+    <input id="number" type="number" />
+    <button onclick="getJokes(event)">Get Jokes</button>
+    <ul id="jokes"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"></script>
+
+    <script>
+      function embedJokes(jokes) {
+        let output = "";
+        jokes.value.forEach(function (Joke) {
+          output += `<li>${Joke.joke}</li>`;
+        });
+
+        console.log(output);
+        document.querySelector("#jokes").innerHTML = output;
+      }
+
+      //   XMLHttpRequest;
+      //   function getJokes(e) {
+      //     const num = document.querySelector("#number").value;
+      //     console.log(num);
+
+      //     const xhr = new XMLHttpRequest();
+      //     const link = `http://api.icndb.com/jokes/random/${num}`;
+
+      //     xhr.open("GET", link, true);
+
+      //     xhr.onload = function () {
+      //       const jokes = JSON.parse(this.responseText);
+      //       embedJokes(jokes);
+      //     };
+
+      //     xhr.send();
+
+      //     e.preventDefault();
+      //   }
+
+      //  Fetch API
+
+      //   function getJokes(e) {
+      //     const num = document.querySelector("#number").value;
+      //     console.log(num);
+
+      //     fetch(`http://api.icndb.commm/jokes/random/${num}`)
+      //       .then((res) => res.json())
+      //       .then((data) => embedJokes(data))
+      //       .catch((err) => console.log);
+
+      //     e.preventDefault();
+      //   }
+
+      //   Axios;
+
+      //   function getJokes(e) {
+      //     const num = document.querySelector("#number").value;
+      //     console.log(num);
+
+      //     axios
+      //       .get(`http://api.icndb.com/jokes/random/${num}`)
+      //       .then((res) => embedJokes(res.data));
+
+      //     e.preventDefault();
+      //   }
+
+      //   Promise
+      (async function () {
+        function fetchJokes() {
+          return new Promise((resolve, reject) => {
+            axios
+              .get(`http://api.icndb.com/jokes/random/10`)
+              .then((res) => resolve(res.data));
+          });
+        }
+
+        try {
+          const jokes = await fetchJokes();
+          console.log(jokes);
+        } catch (err) {
+          console.log(err);
+        }
+      })();
+    </script>
+  </body>
+</html>
