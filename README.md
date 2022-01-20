@@ -71,7 +71,19 @@ There will be a series of sessions, each of which will be about a group of topic
 
 # Day 2
 
-    Will decide based on the interaction.
+- DOM
+  - DOM Manipulation
+  - DOM Events
+  - DOM Traversal
+- Ajax
+  - XMLHttpRequest
+  - Fetch API
+  - Axios
+- Asynchronous Javascript
+  - callback
+  - then/catch
+  - Promise
+  - Async/Await
 
 # Day 3
 
@@ -79,11 +91,6 @@ There will be a series of sessions, each of which will be about a group of topic
 
 # Topics to cover
 
-- DOM Manipulation
-- Async Javascript
-- Callback Approach
-- Promises
-- Async/Await
 - Prototype
 - Classes
 - Modules
