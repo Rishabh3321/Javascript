@@ -72,9 +72,28 @@ There will be a series of sessions, each of which will be about a group of topic
 # Day 2
 
 - DOM
+
   - DOM Manipulation
+
+    - document selectors
+    - HTMLCollection and NodeList
+    - Creating Elements
+    - Modifying Elements
+    - Adding Elements
+    - Removing Elements
+
   - DOM Events
+
+    - Event Listener
+    - Event Bubbling
+    - Event Delegation
+
   - DOM Traversal
+    - Parent Node
+    - Children / Child Node
+    - firstChild / lastChild
+    - Next Sibling Node
+
 - Ajax
   - XMLHttpRequest
   - Fetch API
